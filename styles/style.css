@@ -1,0 +1,102 @@
+/* Reset geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('../assets/images/fundo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cenario {
+  height: 80vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(9,9,121,1) 0%, rgba(165,163,255,1) 0%, rgba(230,230,230,1) 100%, rgba(0,212,255,1) 100%);
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  right: -100px;
+  width: 100px;
+  /* left: 140px; */
+  animation: pipeMove 1.5s infinite linear;
+}
+
+.floor {
+ position: absolute;
+ bottom: -210px; 
+ width: 100%;
+}
+
+.clouds {
+  position: absolute;
+  width: 700px;
+  top: 0;
+  animation: cloudsMove 10s infinite linear;
+}
+
+.mario {
+  position: absolute;
+  bottom: 0;
+  width: 170px;
+}
+
+.jump {
+  animation: jump 0.5s ease-out;
+}
+
+@keyframes pipeMove {
+  from {
+    right: 0%;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes cloudsMove {
+  from {
+    right: -700px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  30% {
+    bottom: 180px;
+  }
+
+  40% {
+      bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  70% {
+    bottom: 180px;
+  }
+
+  70% {
+    bottom: 140px;
+  }
+  
+  100% {
+    bottom: 0;
+  }
+}
