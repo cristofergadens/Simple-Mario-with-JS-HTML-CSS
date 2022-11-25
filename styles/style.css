@@ -6,19 +6,23 @@
 }
 
 body {
-  background-image: url('../assets/images/fundo.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
 }
+
+.floor {
+  position: absolute;
+  bottom: 0;
+}
+
 .cenario {
   height: 80vh;
   width: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+
   background: linear-gradient(180deg, rgba(9,9,121,1) 0%, rgba(165,163,255,1) 0%, rgba(230,230,230,1) 100%, rgba(0,212,255,1) 100%);
 }
-
 .pipe {
   position: absolute;
   bottom: 0;
@@ -32,6 +36,7 @@ body {
  position: absolute;
  bottom: -210px; 
  width: 100%;
+ animation: floorMove 1.5x infinite linear;
 }
 
 .clouds {
@@ -49,6 +54,16 @@ body {
 
 .jump {
   animation: jump 0.5s ease-out;
+}
+
+@keyframes floorMove {
+  from {
+    right: 0%;
+  }
+
+  to {
+    right: 100%;
+  }
 }
 
 @keyframes pipeMove {
