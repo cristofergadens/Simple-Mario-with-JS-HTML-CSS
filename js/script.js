@@ -34,3 +34,4 @@ console.log(loop);
 
 document.addEventListener('keydown', jump);
 
+console.log('Teste log');
